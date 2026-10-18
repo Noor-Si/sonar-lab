@@ -1,5 +1,10 @@
 def divide(a, b):
+    if b == 0:
+        raise ValueError("Cannot divide by zero")
     return a / b
+
+def multiply(a, b):
+    return a * b
 
 def calculate_average(numbers):
     total = 0
@@ -7,13 +12,6 @@ def calculate_average(numbers):
         total = total + numbers[i]
     average = total / len(numbers)
     return average
-
-def unused_helper():
-    x = 10
-    y = 20
-    return x
-
-password = "hunter2"    # hard-coded secret — a security hotspot
 
 def main():
     nums = [4, 8, 15, 16, 23, 42]
