@@ -1,5 +1,4 @@
 name: SonarQube Cloud Analysis
-
 on:
   push:
     branches:
@@ -13,11 +12,11 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Check out repository
-        uses: actions/checkout@v6
+        uses: actions/checkout@eef61447b9af4a24d1d416260172159048f07be8 # v4.1.1
         with:
           fetch-depth: 0
 
       - name: SonarQube Cloud Scan
-        uses: SonarSource/sonarqube-scan-action@v7.0.0 
+        uses: SonarSource/sonarqube-scan-action@af337e72154332f17ecf459178e5f299f18e95c1 # v2.0.1
         env:
           SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
